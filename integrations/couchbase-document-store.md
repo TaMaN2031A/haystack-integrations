@@ -213,10 +213,9 @@ The full list of parameters accepted by `CouchbaseSearchDocumentStore` can be fo
 With Haystack you can use [DocumentWriter](https://docs.haystack.deepset.ai/docs/documentwriter) component to write Documents into a Document Store. In the example below we construct pipeline to write documents to Couchbase using `CouchbaseDocumentStore`:
 
 ```python
-from haystack import Document
+from haystack import Pipeline, Document
 from haystack.components.embedders import SentenceTransformersDocumentEmbedder
 from haystack.components.writers import DocumentWriter
-from haystack.pipeline import Pipeline
 from haystack.utils.auth import Secret
 from couchbase_haystack import CouchbaseSearchDocumentStore, CouchbasePasswordAuthenticator
 
